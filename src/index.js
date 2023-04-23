@@ -2,56 +2,52 @@ import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Logosa from './componentes/imgs/Logo.png'
-import Banner from './componentes/imgs/studio.jpg'
+// import Banner from './componentes/imgs/studio.jpg'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 class App extends React.Component {
-
-  componentDidMount() {
-    // document.body.style.backgroundColor = '#0E243B';
-  }
-
-
-
-  icones = {
-
-    'Inverno': 'fa-snowman'
-  }
-
-
-
-  //'#4169E1'
-
-  //   render() {
-  //     return (
-  //       // <img src={Logosa}/>
-
-  //       <div style={{
-  //         margin: 'auto', width: "100%", padding: "35px 0",
-  //         alignItems: 'center', justifyContent: "space-between" ,backgroundColor: '#546CCF',
-  //         color: 'white', padding: 12, borderRadius: 8
-  //       }}>
-  //         {/* <img src={Logosa} /> */}
-  //         <p className='white-text'>AQUI FICARIAM OS BOTÔES DE NAVEGAÇÃO</p>
-  //       </div>
-
-  //     )
-  //   }
-  // }
-
+ 
   render() {
     return (
+      
       <div className='banner'>
-        <div className='navbar'>
-          <img src={Logosa} className='logo' />
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">ENSAIO</a></li>
-            <li><a href="#">Gravação</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#"></a></li>
-          </ul>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">
+            <img src={Logosa} alt="" width="100" height="100" class="d-inline-block align-text-top me-2"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark"  href="#">Ensaio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark"  href="#">Gravação</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark"  href="#">Contato</a>
+              </li>
+                
+            </ul>
+          </div>
+          
         </div>
+      </nav>
+
+        
+
+        
+      {/* Texto só pra ter uma noção */}
 
         <div className="content">
           <h1>ENCONTRE SEU STUDIO</h1>
